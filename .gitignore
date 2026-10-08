@@ -1,0 +1,14 @@
+.DS_Store
+.gradle/
+.idea/
+*.iml
+local.properties
+**/build/
+
+# Local reverse-engineering inputs and outputs are not project source.
+apk/
+analysis/
+
+# Signing material must never be committed.
+*.jks
+*.keystore

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FreeShare</string>
+    <string name="headline">Share your connection. Keep the speed.</string>
+    <string name="subhead">Start FreeShare, connect another device, then follow the setup guide below.</string>
+    <string name="status_stopped">●  Ready to share</string>
+    <string name="status_format">●  %1$s</string>
+    <string name="start_sharing">Start sharing</string>
+    <string name="stop_sharing">Stop sharing</string>
+    <string name="connection_title">Your FreeShare network</string>
+    <string name="network_label">Network name</string>
+    <string name="password_label">Password</string>
+    <string name="proxy_label">HTTP &amp; HTTPS proxy</string>
+    <string name="waiting_value">Available after startup</string>
+    <string name="copy">Copy</string>
+    <string name="refresh_password">Refresh password</string>
+    <string name="password_refreshed">New password ready</string>
+    <string name="connected_title">Connected devices</string>
+    <string name="connected_title_count">Connected devices (%1$s)</string>
+    <string name="connected_none">No devices connected yet</string>
+    <string name="connected_waiting">Start sharing to see connected devices</string>
+    <plurals name="connected_count">
+        <item quantity="one">%d device</item>
+        <item quantity="other">%d devices</item>
+    </plurals>
+    <string name="setup_title">Set up another device</string>
+    <string name="setup_intro">Choose its operating system. You only need to do this once per network.</string>
+    <string name="os_macos">macOS</string>
+    <string name="os_windows">Windows</string>
+    <string name="os_ios">iPhone / iPad</string>
+    <string name="os_android">Android</string>
+    <string name="os_linux">Linux</string>
+    <string name="guide_macos_title">Connect a Mac</string>
+    <string name="guide_macos">1. Open Wi‑Fi and join %1$s using the password above.\n\n2. Open System Settings › Network › Wi‑Fi › Details › Proxies.\n\n3. Turn on both Web Proxy and Secure Web Proxy. For each one, enter %2$s as the server and %3$d as the port.\n\n4. Select OK. When finished, turn both proxy switches off before returning to another Wi‑Fi network.</string>
+    <string name="guide_windows_title">Connect a Windows PC</string>
+    <string name="guide_windows">1. Open Wi‑Fi and join %1$s using the password above.\n\n2. Open Settings › Network &amp; internet › Proxy.\n\n3. Under Manual proxy setup, turn on Use a proxy server. Enter %2$s for the address and %3$d for the port.\n\n4. Select Save. Turn the proxy switch off when you leave the FreeShare network.</string>
+    <string name="guide_ios_title">Connect an iPhone or iPad</string>
+    <string name="guide_ios">1. Open Settings › Wi‑Fi and join %1$s using the password above.\n\n2. Tap the information button beside the connected network.\n\n3. Tap Configure Proxy › Manual. Enter %2$s as the server and %3$d as the port.\n\n4. Tap Save. Set Configure Proxy back to Off when you leave this network.</string>
+    <string name="guide_android_title">Connect an Android device</string>
+    <string name="guide_android">1. Open Wi‑Fi and join %1$s using the password above.\n\n2. Open that network’s details, tap Edit, then open Advanced options.\n\n3. Set Proxy to Manual. Enter %2$s as the proxy host and %3$d as the port.\n\n4. Save. Change Proxy back to None when you leave this network.</string>
+    <string name="guide_linux_title">Connect a Linux computer</string>
+    <string name="guide_linux">1. Open Wi‑Fi and join %1$s using the password above.\n\n2. Open Settings › Network › Network Proxy and choose Manual.\n\n3. Enter %2$s and port %3$d for both HTTP and HTTPS.\n\n4. Apply the change. Return Network Proxy to Off when you leave FreeShare.</string>
+    <string name="traffic_label">Relayed this session</string>
+    <string name="traffic_zero">0 B</string>
+    <string name="technical_note">FreeShare only accepts connections from its private Wi‑Fi network. Secure websites stay encrypted from your device to the website.</string>
+    <string name="permission_needed">Nearby-device permission is required to create the Wi‑Fi Direct group.</string>
+    <string name="wifi_needed">Turn on Wi‑Fi in the system panel, then tap Start sharing again.</string>
+    <string name="ssid_invalid">Use DIRECT- followed by two letters or digits, then an optional custom name (32 bytes maximum).</string>
+    <string name="password_invalid">Use 8–63 printable characters.</string>
+    <string name="copied">Copied</string>
+    <string name="channel_name">Connection sharing</string>
+</resources>

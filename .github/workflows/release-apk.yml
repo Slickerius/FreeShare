@@ -1,0 +1,56 @@
+name: Build and release APK
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Configure Git identity
+        run: |
+          git config user.name "rastasonna"
+          git config user.email "rastasonna@gmail.com"
+          git config commit.gpgsign false
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Preserve the APK signing key
+        uses: actions/cache@v4
+        with:
+          path: ~/.android/debug.keystore
+          key: freeshare-debug-keystore-v1
+
+      - name: Build installable APK
+        run: ./gradlew --no-daemon assembleDebug
+
+      - name: Name APK and create checksum
+        run: |
+          cp app/build/outputs/apk/debug/app-debug.apk "FreeShare-${GITHUB_SHA::7}.apk"
+          sha256sum "FreeShare-${GITHUB_SHA::7}.apk" > "FreeShare-${GITHUB_SHA::7}.apk.sha256"
+
+      - name: Publish GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: build-${{ github.run_number }}
+          name: FreeShare build ${{ github.run_number }}
+          body: Automated APK build from `${{ github.sha }}`.
+          files: |
+            FreeShare-*.apk
+            FreeShare-*.apk.sha256
